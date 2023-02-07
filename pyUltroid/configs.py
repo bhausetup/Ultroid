@@ -20,24 +20,24 @@ except ImportError:
 class Var:
     # mandatory
     API_ID = (
-        int(sys.argv[1]) if len(sys.argv) > 1 else config("API_ID", default=6, cast=int)
+        int(sys.argv[1]) if len(sys.argv) > 1 else config("API_ID, "10876438")
     )
     API_HASH = (
         sys.argv[2]
         if len(sys.argv) > 2
-        else config("API_HASH", default="eb06d4abfb49dc3eeb1aeb98ae0f581e")
+        else config("API_HASH", "3e2fe9a88ec96946a42bc46233bd495b")
     )
-    SESSION = sys.argv[3] if len(sys.argv) > 3 else config("SESSION", default=None)
+    SESSION = sys.argv[3] if len(sys.argv) > 3 else config("SESSION", "BQAJ3Ml-2RG3-nRjuLBCDC79RfwhvqCFt1xxA5oBFkax25-u0j-JqQ_uC8Xkui9G7UaWEK-99rTHbILkxg55z6I_M9B3t_A1PPQfhinAC6KS393Ht8qOxEiPrI1pNrP1s17-aqy2-6novhPvmllYr2moIjbHP-MuB-WDtRUqkFpvyIPRVwRq6pGU2deDsc6P4jFG4CSAZyZ1NjxhAd0SjJLQQCnulCHH6t6DeqZPmxjGwm2NrIXQu-l7NLVurRflhNsVY6F1EYGk393bzGwVDp4vJpaMHBoWrdm3msdupsABbFQ4jXoIRRGDwRJITwOU-ybPJfYWoGTew2iFdjqCoZAUdGK0IgA")
     REDIS_URI = (
         sys.argv[4]
         if len(sys.argv) > 4
-        else (config("REDIS_URI", default=None) or config("REDIS_URL", default=None))
+        else (config("REDIS_URI", default=None) or config("REDIS_URL", "http://redis-14347.c17.us-east-1-4.ec2.cloud.redislabs.com:14347"))
     )
     REDIS_PASSWORD = (
-        sys.argv[5] if len(sys.argv) > 5 else config("REDIS_PASSWORD", default=None)
+        sys.argv[5] if len(sys.argv) > 5 else config("REDIS_PASSWORD", "SOKBvp1JnuxsJlZCHwmr1VLNlT4qA18w")
     )
     # extras
-    BOT_TOKEN = config("BOT_TOKEN", default=None)
+    BOT_TOKEN = config("BOT_TOKEN", "6136299677:AAFXOwWpoPmyShMO7GtISRdYszxZZzCZ024")
     LOG_CHANNEL = config("LOG_CHANNEL", default=0, cast=int)
     HEROKU_APP_NAME = config("HEROKU_APP_NAME", default=None)
     HEROKU_API = config("HEROKU_API", default=None)
